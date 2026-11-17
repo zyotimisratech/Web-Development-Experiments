@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HTML5 Form Validation</title>
+</head>
+<body>
+    <h1>Student Registration Form</h1>
+    <form>
+        <label>Name:</label>
+        <input type="text" name="name" required>
+        <br><br>
+        <label>Email:</label>
+        <input type="email" name="email" required>
+        <br><br>
+        <label>Password:</label>
+        <input type="password" name="password"
+               minlength="4" required>
+        <br><br>
+        <label>Age:</label>
+        <input type="number" name="age" min="16" max="30" required>
+        <br><br>
+        <label>Phone:</label>
+        <input type="tel" name="phone"
+               pattern="[0-9]{10}"
+               title="Enter a 10-digit phone number" required>
+        <br><br>
+        <label>Date of Birth:</label>
+        <input type="date" name="dob" required>
+        <br><br>
+        <label>Gender:</label>
+        <input type="radio" name="gender" value="Male" required> Male
+        <input type="radio" name="gender" value="Female"> Female
+        <br><br>
+        <label>Course:</label>
+        <select name="course" required>
+            <option value="">Select Course</option>
+            <option value="CSE">Computer Science</option>
+            <option value="DS">Data Science</option>
+            <option value="ET">Electronics and Telecommunication</option>
+        </select>
+        <br><br>
+        <input type="submit" value="Register">
+        <input type="reset" value="Clear">
+    </form>
+</body>
+</html>
