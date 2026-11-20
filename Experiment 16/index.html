@@ -1,0 +1,76 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form Validation</title>
+</head>
+<body>
+    <h1>Student Registration Form</h1>
+    <form onsubmit="return validateForm()">
+        Name:
+        <input type="text" id="name">
+        <br><br>
+        Email:
+        <input type="text" id="email">
+        <br><br>
+        Phone Number:
+        <input type="text" id="phone">
+        <br><br>
+        Password:
+        <input type="password" id="password">
+        <br><br>
+        Confirm Password:
+        <input type="password" id="confirmPassword">
+        <br><br>
+        Age:
+        <input type="number" id="age">
+        <br><br>
+        <input type="submit" value="Register">
+        <input type="reset" value="Clear">
+    </form>
+    <p id="message"></p>
+    <script>
+        // FORM VALIDATION FUNCTION
+        function validateForm() {
+            // GET FORM VALUES
+            var name = document.getElementById("name").value;
+            var email = document.getElementById("email").value;
+            var phone = document.getElementById("phone").value;
+            var password = document.getElementById("password").value;
+            var confirmPassword = document.getElementById("confirmPassword").value;
+            var age = document.getElementById("age").value;
+            // BASIC VALIDATION
+            if (name == "" || email == "" || phone == "" ||
+                password == "" || confirmPassword == "" || age == "") {
+                alert("Please fill all the fields.");
+                return false;
+            }
+            // ADVANCED VALIDATION
+            if (!email.includes("@") || !email.includes(".")) {
+                alert("Please enter a valid email address.");
+                return false;
+            }
+            if (phone.length != 10 || isNaN(phone)) {
+                alert("Please enter a valid 10-digit phone number.");
+                return false;
+            }
+            if (password.length < 8) {
+                alert("Password must contain at least 8 characters.");
+                return false;
+            }
+            if (password != confirmPassword) {
+                alert("Passwords do not match.");
+                return false;
+            }
+            if (age < 18 || age > 30) {
+                alert("Age must be between 18 and 30.");
+                return false;
+            }
+            // SUCCESS MESSAGE
+            document.getElementById("message").innerHTML =
+                "Registration Successful!";
+            return false;
+        }
+    </script>
+</body>
+</html>
