@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>The Makeup Edit</title>
+</head>
+<body>
+    <h1>The Makeup Edit</h1>
+    <p>A little collection of everyday beauty essentials.</p>
+    <script>
+        // VARIABLES
+        var productName = "Liquid Blush";
+        var price = 450;
+        var budget = 600;
+        // DISPLAY PRODUCT DETAILS
+        document.write("<h2>Featured Product</h2>");
+        document.write("Product: " + productName + "<br>");
+        document.write("Price: Rs. " + price + "<br>");
+        document.write("Budget: Rs. " + budget + "<br>");
+        // IF-ELSE STATEMENT
+        if (price <= budget) {
+            document.write("Status: Within Budget<br>");
+        }
+        else {
+            document.write("Status: Over Budget<br>");
+        }
+        // FOR LOOP
+        document.write("<h2>Beauty Essentials</h2>");
+        var products = [
+            "Lip Tint",
+            "Liquid Blush",
+            "Concealer",
+            "Color Corrector",
+            "Setting Powder",
+            "Mascara Primer",
+            "Lip Liner",
+            "Highlighter Balm"
+        ];
+        for (var i = 0; i < 8; i++) {
+            document.write((i + 1) + ". " + products[i] + "<br>");
+        }
+        // WHILE LOOP
+        document.write("<h2>Shopping Bag</h2>");
+        var quantity = 1;
+        while (quantity <= 3) {
+            document.write("Product " + quantity + " added to bag<br>");
+            quantity++;
+        }
+    </script>
+</body>
+</html>
