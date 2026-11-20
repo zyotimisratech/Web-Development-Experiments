@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Literary Bookstore</title>
+</head>
+<body>
+    <h1>Literary Bookstore</h1>
+    <script>
+        // VARIABLES AND DATA TYPES
+        // String Data Type
+        var bookName = "Murder on the Orient Express";
+        var author = "Agatha Christie";
+        // Number Data Type
+        var price = 350;
+        var quantity = 2;
+        var budget = 1000;
+        // Boolean Data Type
+        var available = true;
+        // DISPLAY BOOK DETAILS
+        document.write("<h2>Book Information</h2>");
+        document.write("Book: " + bookName + "<br>");
+        document.write("Author: " + author + "<br>");
+        document.write("Price: Rs. " + price + "<br>");
+        document.write("Available: " + available + "<br>");
+        // ARITHMETIC OPERATORS
+        var total = price * quantity;
+        var balance = budget - total;
+        document.write("<h2>Bill Details</h2>");
+        document.write("Quantity: " + quantity + "<br>");
+        document.write("Total Price: Rs. " + total + "<br>");
+        document.write("Fixed Budget: Rs. " + budget + "<br>");
+        document.write("Remaining Balance: Rs. " + balance + "<br>");
+        // COMPARISON OPERATOR
+        document.write("Within Budget: " + (total <= budget));
+    </script>
+</body>
+</html>
