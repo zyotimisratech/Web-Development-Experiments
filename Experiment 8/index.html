@@ -1,0 +1,115 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>The Ocean Within</title>
+
+    <style>
+        body {
+            background-color: #EAF4F8;
+            font-family: Georgia;
+            color: #193B50;
+            text-align: center;
+        }
+
+        h1, h2 {
+            color: #245A78;
+        }
+
+        .box {
+            background-color: #D3E8F0;
+            border: 1px solid #A6C9D9;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 10px;
+        }
+
+        /* Float Layout */
+        .float-container {
+            width: 60%;
+            margin: auto;
+        }
+
+        .float-box {
+            float: left;
+            width: 40%;
+        }
+
+        .clear {
+            clear: both;
+        }
+
+        /* Inline-Block Layout */
+        .inline-box {
+            display: inline-block;
+            width: 25%;
+        }
+
+        /* Flexbox Layout */
+        .flex-container {
+            display: flex;
+            justify-content: center;
+        }
+
+        .flex-box {
+            width: 25%;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <h1>The Ocean Within</h1>
+
+    <p>Where every wave carries a story.</p>
+
+    <h2>01. Float Layout</h2>
+
+    <div class="float-container">
+
+        <div class="box float-box">
+            <h3>The Waves</h3>
+            <p>Endless waves dancing along the shore.</p>
+        </div>
+
+        <div class="box float-box">
+            <h3>The Shore</h3>
+            <p>Where the ocean meets the land.</p>
+        </div>
+
+        <div class="clear"></div>
+
+    </div>
+
+    <h2>02. Inline-Block Layout</h2>
+
+    <div class="box inline-box">
+        <h3>Sea Shells</h3>
+        <p>Little treasures of the sea.</p>
+    </div>
+
+    <div class="box inline-box">
+        <h3>Corals</h3>
+        <p>A colourful world beneath the waves.</p>
+    </div>
+
+    <h2>03. Flexbox Layout</h2>
+
+    <div class="flex-container">
+
+        <div class="box flex-box">
+            <h3>Deep Blue</h3>
+            <p>The mystery of the ocean.</p>
+        </div>
+
+        <div class="box flex-box">
+            <h3>Sea Breeze</h3>
+            <p>A gentle whisper of the coast.</p>
+        </div>
+
+    </div>
+
+</body>
+</html>
