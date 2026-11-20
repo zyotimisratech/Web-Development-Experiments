@@ -1,0 +1,25 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DOM Manipulation</title>
+</head>
+<body>
+    <h1 id="heading">Welcome to JavaScript</h1>
+    <p id="paragraph">This is a simple webpage.</p>
+    <button onclick="changeContent()">Change Content</button>
+    <button onclick="changeStyle()">Change Style</button>
+    <script>
+        // FUNCTION TO CHANGE CONTENT
+        function changeContent() {
+            document.getElementById("paragraph").innerHTML =
+                "The content has been changed using JavaScript.";
+        }
+        // FUNCTION TO CHANGE STYLE
+        function changeStyle() {
+            document.getElementById("heading").style.color = "blue";
+            document.body.style.backgroundColor = "lightyellow";
+        }
+    </script>
+</body>
+</html>
