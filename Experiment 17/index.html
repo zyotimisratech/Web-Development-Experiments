@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Calculator</title>
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+        }
+        table {
+            margin: 30px auto;
+            padding: 15px;
+            border: 1px solid black;
+        }
+        input {
+            padding: 10px;
+            width: 180px;
+        }
+        button {
+            padding: 10px 18px;
+            margin: 5px;
+            cursor: pointer;
+        }
+        #result {
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Simple Calculator</h1>
+    <table>
+        <tr>
+            <td>First Number:</td>
+            <td><input type="number" id="num1"></td>
+        </tr>
+        <tr>
+            <td>Second Number:</td>
+            <td><input type="number" id="num2"></td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <button onclick="calculate('+')">+</button>
+                <button onclick="calculate('-')">-</button>
+                <button onclick="calculate('*')">*</button>
+                <button onclick="calculate('/')">/</button>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <h3 id="result">Result will appear here</h3>
+            </td>
+        </tr>
+    </table>
+    <script>
+        // FUNCTION TO PERFORM CALCULATIONS
+        function calculate(operator) {
+            var a = Number(document.getElementById("num1").value);
+            var b = Number(document.getElementById("num2").value);
+            var result;
+            // CHECK EMPTY INPUTS
+            if (document.getElementById("num1").value == "" ||
+                document.getElementById("num2").value == "") {
+                result = "Please enter both numbers.";
+            }
+            // PERFORM ARITHMETIC OPERATIONS
+            else if (operator == '+') {
+                result = a + b;
+            }
+            else if (operator == '-') {
+                result = a - b;
+            }
+            else if (operator == '*') {
+                result = a * b;
+            }
+            else if (operator == '/') {
+                if (b == 0) {
+                    result = "Cannot divide by zero.";
+                }
+                else {
+                    result = a / b;
+                }
+            }
+            // DISPLAY RESULT
+            document.getElementById("result").innerHTML =
+                "Result: " + result;
+        }
+    </script>
+</body>
+</html>
