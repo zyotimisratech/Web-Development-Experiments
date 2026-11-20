@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ocean Image Slideshow</title>
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            text-align: center;
+        }
+        img {
+            width: 400px;
+            height: 250px;
+            object-fit: cover;
+            border: 1px solid black;
+        }
+        button {
+            padding: 10px 20px;
+            margin: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Ocean Image Slideshow</h1>
+    <img id="slide" src="Ocean 1.jpg" alt="Ocean Image">
+    <br><br>
+    <button onclick="previousImage()">Previous</button>
+    <button onclick="nextImage()">Next</button>
+    <script>
+        // ARRAY OF IMAGE PATHS
+        var images = [
+            "Ocean 1.jpg",
+            "Ocean 2.jpg",
+            "Ocean 3.jpg"
+        ];
+        // CURRENT IMAGE INDEX
+        var index = 0;
+        // FUNCTION TO SHOW NEXT IMAGE
+        function nextImage() {
+            index++;
+            if (index >= images.length) {
+                index = 0;
+            }
+            document.getElementById("slide").src = images[index];
+        }
+        // FUNCTION TO SHOW PREVIOUS IMAGE
+        function previousImage() {
+            index--;
+            if (index < 0) {
+                index = images.length - 1;
+            }
+            document.getElementById("slide").src = images[index];
+        }
+    </script>
+</body>
+</html>
