@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Discover Odisha</title>
+</head>
+<body>
+    <h1>Discover Odisha</h1>
+    <p>Explore the art, culture and heritage of Odisha.</p>
+    <h2>Famous Places</h2>
+    <p>1. Konark Sun Temple</p>
+    <p>2. Jagannath Temple, Puri</p>
+    <p>3. Chilika Lake</p>
+    <p>4. Lingaraj Temple</p>
+    <h2>Traditional Art Forms</h2>
+    <p>Pattachitra Painting</p>
+    <p>Odissi Dance</p>
+    <p>Silver Filigree Work</p>
+    <button onclick="explore()">Explore Odisha</button>
+    <script>
+        // ALERT BOX
+        alert("Welcome to Odisha: The Land of Heritage !!");
+        // PROMPT BOX
+        var visitorName = prompt("Enter your name:");
+        // CONFIRM BOX
+        function explore() {
+            var choice = confirm("Would you like to explore the heritage of Odisha?");
+            if (choice == true) {
+                alert("Welcome " + visitorName + "! Enjoy exploring Odisha.");
+            }
+            else {
+                alert("Thank you for visiting Discover Odisha!");
+            }
+        }
+    </script>
+</body>
+</html>
