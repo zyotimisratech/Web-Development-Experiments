@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ayurvedic Herbs</title>
+</head>
+<body>
+    <h1>Ayurvedic Herbs & Ingredients</h1>
+    <p>An introduction to traditional botanical ingredients.</p>
+    <script>
+        // FUNCTION TO DISPLAY HERB DETAILS
+        function showHerb(name, origin) {
+            document.write("<h3>" + name + "</h3>");
+            document.write("Origin: " + origin + "<br>");
+        }
+        // FUNCTION CALLS
+        document.write("<h2>Herbal Collection</h2>");
+        showHerb("Ashwagandha", "India");
+        showHerb("Brahmi", "India");
+        showHerb("Turmeric", "South Asia");
+        showHerb("Amla", "India");
+        showHerb("Neem", "Indian Subcontinent");
+        showHerb("Tulsi", "India");
+        // FUNCTION WITH RETURN VALUE
+        function calculateQuantity(quantity, packets) {
+            var total = quantity * packets;
+            return total;
+        }
+        // FUNCTION CALL
+        document.write("<h2>Herbal Collection Order</h2>");
+        var totalQuantity = calculateQuantity(100, 3);
+        document.write("Herb: Tulsi Powder<br>");
+        document.write("Quantity per packet: 100 grams<br>");
+        document.write("Number of packets: 3<br>");
+        document.write("Total Quantity: " + totalQuantity + " grams");
+    </script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>The Boutique Collection</title>
+</head>
+<body>
+    <h1>The Boutique Collection</h1>
+    <p>Discover timeless styles and elegant fashion.</p>
+    <h2>Our Collection</h2>
+    <!-- ONMOUSEOVER EVENT -->
+    <h3 onmouseover="this.style.color='#A05252'"
+        onmouseout="this.style.color='black'">
+        Floral Dress
+    </h3>
+    <p>Elegant floral dress for everyday style.</p>
+    <h3 onmouseover="this.style.color='#A05252'"
+        onmouseout="this.style.color='black'">
+        Silk Saree
+    </h3>
+    <p>A graceful addition to your wardrobe.</p>
+    <h3 onmouseover="this.style.color='#A05252'"
+        onmouseout="this.style.color='black'">
+        Linen Co-ord Set
+    </h3>
+    <p>Comfortable and effortless fashion.</p>
+    <!-- ONCLICK EVENT -->
+    <h2>Special Offer</h2>
+    <button onclick="showOffer()">View Offer</button>
+    <p id="offer"></p>
+    <!-- ONSUBMIT EVENT -->
+    <h2>Join Our Boutique</h2>
+    <form onsubmit="showMessage(); return false;">
+        Name:
+        <input type="text" id="name" required>
+        <br><br>
+        Email:
+        <input type="email" required>
+        <br><br>
+        <input type="submit" value="Submit">
+    </form>
+    <p id="message"></p>
+    <script>
+        // FUNCTION FOR ONCLICK
+        function showOffer() {
+            document.getElementById("offer").innerHTML =
+                "Enjoy 20% off on your first purchase!";
+        }
+        // FUNCTION FOR ONSUBMIT
+        function showMessage() {
+            var customerName = document.getElementById("name").value;
+            document.getElementById("message").innerHTML =
+                "Thank you for joining us, " + customerName + "!";
+        }
+    </script>
+</body>
+</html>
